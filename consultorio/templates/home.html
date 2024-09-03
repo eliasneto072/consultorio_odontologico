@@ -7,6 +7,15 @@
 
 {% block main %}
 <main>
+    <!-- Bloco para exibir mensagens -->
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
     <!-- Seção de Serviços -->
     <section id="servicos">
         <h2>Serviços</h2>

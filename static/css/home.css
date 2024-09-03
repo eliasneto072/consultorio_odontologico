@@ -161,3 +161,38 @@ main {
 #cadastro button:hover {
     background-color: #033737; /* Cor de fundo do botão ao passar o mouse */
 }
+
+/* Estilos para as mensagens de feedback */
+.messages {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.messages li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px; /* Ajuste de tamanho de fonte */
+}
+
+/* Estilo para mensagens de sucesso */
+.messages .success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Estilo para mensagens de erro */
+.messages .error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Estilo para mensagens informativas */
+.messages .info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
