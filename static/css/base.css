@@ -1,0 +1,259 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #042943; /* Cor de fundo do header */
+    border-bottom: 1px solid #ddd; /* Linha inferior opcional */
+    flex-wrap: wrap;
+    position: relative;
+    color: white;
+
+}
+
+.logo p {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.logo img {
+    margin-right: 20px;
+    margin-left: 40px;
+    width: 80px;
+    border-radius: 15%;
+    object-fit: cover;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+    
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+
+}
+
+/* Linha azul embaixo do link selecionado */
+.menu ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white; /* Cor da linha azul */
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.menu ul li a:hover::after,
+.menu ul li a:focus::after,
+.menu ul li a.active::after {
+    width: 100%;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none; /* Esconde o botão em telas grandes */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #000;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Esconde o menu em telas pequenas */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário */
+        left: 0;
+        background: #fff; /* Cor de fundo do menu */
+        border-top: 1px solid #ddd; /* Linha superior opcional */
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão em telas pequenas */
+    }
+
+    .menu.show {
+        display: flex; /* Mostra o menu quando o botão é clicado */
+    }
+}
+
+/* Mostra o menu quando o botão é clicado */
+.menu.show {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu.show .menu-toggle span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.menu.show .menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.show .menu-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+
+
+/* Estilo para o ícone do WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Espaço do fundo da tela */
+    right: 20px; /* Espaço da borda direita da tela */
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+}
+
+.whatsapp-icon img {
+    width: 60px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 60px; /* Mantém a altura proporcional ao tamanho */
+    border-radius: 50%; /* Torna o ícone redondo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para destaque */
+    transition: background-color 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+.whatsapp-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent; /* Remove o fundo do link */
+}
+
+.whatsapp-icon a:hover img {
+    background-color: #25d366; /* Cor de fundo ao passar o mouse */
+}
+
+/* FIM WHATSAPP ICON*/
+
+footer {
+    background-color: #042943; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.footer-logo p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+    margin: 0 15px;
+}
+
+.footer-links ul li a,
+.footer-social ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.footer-social ul li a img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social ul li a:hover img {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links ul,
+    .footer-social ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .footer-links ul li,
+    .footer-social ul li {
+        margin: 5px 0;
+    }
+}

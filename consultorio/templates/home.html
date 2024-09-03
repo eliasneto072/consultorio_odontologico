@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock css %}
+
+{% block main %}
+<main>
+    <!-- Seção de Serviços -->
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <div class="services-grid">
+            {% for servico in servicos %}
+                <div class="service-item">
+                    <img src="{{ servico.img.url }}" alt="{{ servico.nome }}">
+                    <p>{{ servico.nome }}</p>
+                    <p>{{ servico.descricao }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+    <!-- Seção de Agendamento -->
+    <section id="agendamento">
+        <h2>Agendamento</h2>
+        <form action="{% url 'home' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="agendamentoform" value="1">
+            
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+            
+            <label for="hora">Horário:</label>
+            <input type="time" id="hora" name="hora" required>
+            
+            <label for="servico">Serviço:</label>
+            {{ agendamentoform.servico }}
+            
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Seu Email" required>
+            
+            <button type="submit">Agendar</button>
+        </form>
+    </section>
+</main>
+{% endblock main %}

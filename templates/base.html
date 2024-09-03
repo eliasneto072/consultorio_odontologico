@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    {% block head %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    {% endblock head %}
+    {% block css %}{% endblock css %}
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <p>
+                <img src="{% static 'assets/logo.jpg' %}" alt="Logo Dr. Eduardo">
+                Dr. Eduardo Rodrigues
+            </p>
+        </div>
+    
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="menu">
+            <ul>
+                <li><a href="{% url 'home' %}#servicos" class="menu-item" data-slide="0">Serviços</a></li>
+                <li><a href="{% url 'home' %}#agendamento" class="menu-item" data-slide="1">Agendamento</a></li>
+                <li><a href="{% url 'cadastro' %}" class="menu-item" data-slide="2">Cadastro</a></li>
+            </ul>
+        </nav>
+        <div class="menu social">
+            <ul>
+                <li><a href="mailto:email@example.com">
+                    <img src="{% static 'assets/Gmail.png' %}" alt="Gmail" width="60px">
+                </a></li>
+            </ul>
+        </div>
+    </header>
+
+    {% block main %}
+    
+    {% endblock main %}
+    
+    <!-- WhatsApp Icon -->
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/1234567890" target="_blank">
+            <img src="{% static 'assets/WhatsApp.png' %}" alt="WhatsApp">
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/assets/logo.jpg" alt="Logo Dr. Eduardo">
+                <p>Dr. Eduardo Rodrigues</p>
+            </div>
+    
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#agendamento">Agendamento</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="mailto:email@example.com">Contato</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <ul>
+                    <li><a href="https://wa.me/1234567890" target="_blank">
+                        <img src="/assets/WhatsApp.png" alt="WhatsApp" width="30px">
+                    </a></li>
+                    <!-- Adicione outros ícones de redes sociais conforme necessário -->
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dr. Eduardo Rodrigues. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Estilos da Seção de Serviços */
+#servicos {
+    padding: 20px;
+    background-color: #f5f5f5; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+}
+
+#servicos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px; /* Tamanho da fonte do título */
+    color: #042943; /* Cor do título */
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite a quebra de linha das imagens */
+    justify-content: center; /* Centraliza o grid horizontalmente */
+    gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px; /* Ajuste a largura máxima dos itens */
+    background-color: #fff; /* Cor de fundo dos itens */
+    padding: 20px;
+    border-radius: 8px; /* Borda arredondada nos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px; /* Espaçamento entre as linhas de serviços */
+}
+
+.service-item img {
+    width: 100%; /* Ajuste o tamanho das imagens para preencher o container */
+    height: auto;
+    border-radius: 8px; /* Borda arredondada nas imagens */
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+.service-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo específico para a descrição dos serviços */
+.service-item p:nth-of-type(2) {
+    font-size: 14px;
+    color: #666; /* Cor mais clara para a descrição */
+    margin-top: 5px; /* Espaçamento acima da descrição */
+    line-height: 1.5; /* Altura da linha para melhorar a legibilidade */
+}
+
+/* Estilos da Seção de Agendamento */
+#agendamento {
+    padding: 20px;
+    background-color: #e0e0e0; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+}
+
+#agendamento h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px; /* Tamanho da fonte do título */
+    color: #042943; /* Cor do título */
+}
+
+#agendamento form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os campos do formulário */
+}
+
+#agendamento label {
+    font-size: 16px;
+    color: #333;
+}
+
+#agendamento input, #agendamento textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%; /* Faz os campos ocuparem toda a largura disponível */
+}
+
+#agendamento button {
+    padding: 10px;
+    background-color: #042943; /* Cor do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+}
+
+#agendamento button:hover {
+    background-color: #033737; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos da Seção de Cadastro */
+#cadastro {
+    padding: 20px;
+    background-color: #e0e0e0; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#cadastro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px; /* Tamanho da fonte do título */
+    color: #042943; /* Cor do título */
+}
+
+#cadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#cadastro input, #cadastro textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%; /* Faz os campos ocuparem toda a largura disponível */
+}
+
+#cadastro button {
+    padding: 10px;
+    background-color: #042943; /* Cor do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+}
+
+#cadastro button:hover {
+    background-color: #033737; /* Cor de fundo do botão ao passar o mouse */
+}
